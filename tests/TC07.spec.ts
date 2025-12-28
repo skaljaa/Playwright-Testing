@@ -16,14 +16,12 @@ test.describe('TC_07: Verify Order Placement from Basket', () => {
         await homePage.navigateToBasket();
         expect(page.url()).toContain('/basket');
         
-        await basketPage.fillCustomerName('Tarik S');
-        await basketPage.fillCustomerAddress('Nikole Sopa 11, Sarajevo');
+        await basketPage.fillCustomerName('Mustafa L');
+        await basketPage.fillCustomerAddress('Drvenija 1, Sarajevo');
 
         await basketPage.fillCardNumber('1111111111111111');
         await basketPage.fillCardExpiry('12/25');
         await basketPage.fillCardCVV('123');
-
-        await basketPage.selectDeliveryType('standard');
 
         await basketPage.clickOrderButton();
 
